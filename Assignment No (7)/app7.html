@@ -1,0 +1,33 @@
+<!-- 7. Write a function that retrieves an object from localStorage. The function
+should take one argument, which is a string representing the key used to
+store the object. The function should return the object -->
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Retrieve object from localStorage</title>
+  </head>
+  <body>
+    <script>
+      function getObjectFromLocalStorage(key) {
+        // Get the JSON string from the localStorage based on the key
+        const objStr = localStorage.getItem(key);
+
+        // If the JSON string is not null, parse it to an object and return it
+        if (objStr !== null) {
+          const obj = JSON.parse(objStr);
+          return obj;
+        }
+
+        // If the JSON string is null, return null
+        return null;
+      }
+
+      // Example usage:
+      const myObj = getObjectFromLocalStorage("myWorld");
+      console.log(myObj);
+    </script>
+  </body>
+</html>
+

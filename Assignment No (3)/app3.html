@@ -1,0 +1,31 @@
+<!-- 3. Write a function that adds a new paragraph element to the bottom of an
+HTML document. The function should take a string argument that will be
+used as the text content of the new paragraph element -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+        function addParagraph(text) {
+    const newParagraph = document.createElement('p'); // create a new paragraph element
+    newParagraph.textContent = text; // set the text content of the new paragraph element
+    const parentElement = document.querySelector('body'); // get a reference to the parent element
+    parentElement.appendChild(newParagraph); // append the new paragraph element to the parent element
+  }
+  addParagraph('Hello World!, my paragraph!'); 
+
+  
+    </script>
+</body>
+</html>
+

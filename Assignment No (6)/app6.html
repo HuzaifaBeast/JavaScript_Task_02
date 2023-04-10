@@ -1,0 +1,23 @@
+<!-- 6. Write a function that saves an object to localStorage. The function should
+take two arguments: the first argument is a string representing the key to
+use for storing the object, and the second argument is the object to store -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Save object to localStorage</title>
+  </head>
+  <body>
+    <script>
+      function saveObjectToLocalStorage(key, obj) {
+        const objStr = JSON.stringify(obj);
+
+        localStorage.setItem(key, objStr);
+      }
+
+      const myObj = { name: "Huzaifa", age: 19 };
+      saveObjectToLocalStorage("myKey", myObj);
+    </script>
+  </body>
+</html>
+

@@ -1,0 +1,38 @@
+<!-- 4. Write a function that adds a new list item to an unordered list in an HTML
+document. The function should take a string argument that will be used as
+the text content of the new list item.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- HTML code for an unordered list -->
+<ul id="my-list">
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+
+<!-- JavaScript code to add a new list item -->
+<script>
+function addListItem(text) {
+  
+  var myList = document.getElementById("my-list");
+
+    var newItem = document.createElement("li");
+  newItem.textContent = text;
+
+  
+  myList.appendChild(newItem);
+}
+</script>
+<button onclick="addListItem('Item 4')">Add Item</button>
+
+
+</body>
+</html>
